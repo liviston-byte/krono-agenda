@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #f6f5f0;
+  --bg-surface: #ffffff;
+  --bg-elevated: #eeece4;
+  --border-subtle: #e2dfd5;
+  --border-strong: #c8c3b4;
+
+  --text-primary: #161b22;
+  --text-secondary: #434c59;
+  --text-muted: #687382;
+
+  --accent-primary: #1e40af;
+  --accent-primary-hover: #1e3a8a;
+  --accent-soft: #eff6ff;
+
+  --status-calm: #0f766e;
+  --status-calm-soft: #f0fdfa;
+  --status-soon: #b45309;
+  --status-soon-soft: #fffbeb;
+  --status-urgent: #b91c1c;
+  --status-urgent-soft: #fef2f2;
+
+  --shadow-sm: 0 1px 2px rgba(22, 27, 34, 0.04);
+  --shadow-md: 0 6px 18px rgba(22, 27, 34, 0.07);
+  --shadow-lg: 0 18px 40px rgba(22, 27, 34, 0.14);
+}
+
+.dark {
+  --bg-canvas: #0d1117;
+  --bg-surface: #151b23;
+  --bg-elevated: #1e2631;
+  --border-subtle: #26303d;
+  --border-strong: #394657;
+
+  --text-primary: #eceff4;
+  --text-secondary: #c5cdd8;
+  --text-muted: #8b949e;
+
+  --accent-primary: #60a5fa;
+  --accent-primary-hover: #93c5fd;
+  --accent-soft: rgba(96, 165, 250, 0.14);
+
+  --status-calm: #2dd4bf;
+  --status-calm-soft: rgba(45, 212, 191, 0.12);
+  --status-soon: #fbbf24;
+  --status-soon-soft: rgba(251, 191, 36, 0.12);
+  --status-urgent: #f87171;
+  --status-urgent-soft: rgba(248, 113, 113, 0.12);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-editorial {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-mono-time {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "app": {
+    "name": "Krono",
+    "subtitle": "Local-first personal agenda",
+    "localBadge": "Offline-ready"
+  },
+  "nav": {
+    "today": "Today",
+    "day": "Day",
+    "week": "Week",
+    "newEvent": "New event",
+    "settings": "Settings"
+  },
+  "agenda": {
+    "emptyTitle": "No events for this period",
+    "emptySubtitle": "Add an event with a reminder and record why it matters.",
+    "categories": {
+      "focus": "Deep Focus",
+      "personal": "Personal",
+      "health": "Health",
+      "quick": "Quick"
+    },
+    "completed": "Completed",
+    "pending": "Pending",
+    "snoozedCount_one": "Snoozed {{count}} time",
+    "snoozedCount_other": "Snoozed {{count}} times",
+    "markDone": "Complete",
+    "reopen": "Reopen",
+    "delete": "Delete",
+    "edit": "Edit",
+    "testReminder": "Trigger reminder"
+  },
+  "form": {
+    "createTitle": "New event",
+    "editTitle": "Edit event",
+    "titleLabel": "Title",
+    "titlePlaceholder": "e.g., Review monthly budget",
+    "dateLabel": "Date",
+    "startTimeLabel": "Start time",
+    "durationLabel": "Duration (min)",
+    "categoryLabel": "Category",
+    "reminderLabel": "Remind before",
+    "reminderOptions": {
+      "0": "At exact time",
+      "5": "5 min before",
+      "15": "15 min before",
+      "30": "30 min before",
+      "60": "1 hour before"
+    },
+    "capsuleTitle": "Past-Self Time Capsule",
+    "capsuleHint": "Leave a short note or voice memo (up to 10s) explaining why this matters.",
+    "whyLabel": "Why does this matter?",
+    "whyPlaceholder": "e.g., Getting this done today frees up my weekend.",
+    "recordVoice": "Record audio (10s)",
+    "stopRecording": "Stop ({{sec}}s)",
+    "voiceSaved": "Audio saved ({{sec}}s)",
+    "removeVoice": "Remove audio",
+    "micError": "Could not access microphone.",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "reminderModal": {
+    "badge": "Active reminder",
+    "capsuleLabel": "Message from your past self",
+    "voiceLabel": "Voice note from your past self",
+    "doneBtn": "Done!",
+    "snoozeBtn": "Snooze 15 min",
+    "frictionTitle": "You have snoozed this {{count}} times",
+    "frictionSubtitle": "Before snoozing again, pick a reason so I can find a real free slot:",
+    "reasons": {
+      "no_time": "No time right now",
+      "low_energy": "Low energy",
+      "blocked": "Blocked / waiting"
+    },
+    "suggestedSlot": "Suggested next free slot: {{slot}}",
+    "confirmSmartSnooze": "Reschedule to this slot"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themes": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "notificationsTitle": "Browser notifications",
+    "notificationsGranted": "Enabled",
+    "notificationsDenied": "Blocked in browser",
+    "notificationsDefault": "Not requested",
+    "enableNotifications": "Enable notifications",
+    "testNotification": "Test notification",
+    "testNotificationBody": "All set! Your reminders will look like this."
+  }
+}

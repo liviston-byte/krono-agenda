@@ -1,0 +1,95 @@
+{
+  "app": {
+    "name": "Krono",
+    "subtitle": "Agenda pessoal local-first",
+    "localBadge": "Offline-ready"
+  },
+  "nav": {
+    "today": "Hoje",
+    "day": "Dia",
+    "week": "Semana",
+    "newEvent": "Novo compromisso",
+    "settings": "Configurações"
+  },
+  "agenda": {
+    "emptyTitle": "Nenhum compromisso para este período",
+    "emptySubtitle": "Adicione um compromisso com lembrete e grave o porquê de ele importar.",
+    "categories": {
+      "focus": "Foco Alto",
+      "personal": "Pessoal",
+      "health": "Saúde",
+      "quick": "Rápido"
+    },
+    "completed": "Concluído",
+    "pending": "Pendente",
+    "snoozedCount_one": "Adiado {{count}} vez",
+    "snoozedCount_other": "Adiado {{count}} vezes",
+    "markDone": "Concluir",
+    "reopen": "Reabrir",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "testReminder": "Simular lembrete"
+  },
+  "form": {
+    "createTitle": "Novo compromisso",
+    "editTitle": "Editar compromisso",
+    "titleLabel": "Título",
+    "titlePlaceholder": "Ex: Revisar orçamento mensal",
+    "dateLabel": "Data",
+    "startTimeLabel": "Início",
+    "durationLabel": "Duração (min)",
+    "categoryLabel": "Categoria",
+    "reminderLabel": "Lembrar antes",
+    "reminderOptions": {
+      "0": "Na hora exata",
+      "5": "5 min antes",
+      "15": "15 min antes",
+      "30": "30 min antes",
+      "60": "1 hora antes"
+    },
+    "capsuleTitle": "Cápsula do Eu do Passado",
+    "capsuleHint": "Deixe uma nota ou áudio curto (até 10s) explicando por que isso importa.",
+    "whyLabel": "Por que isso importa?",
+    "whyPlaceholder": "Ex: Se eu resolver hoje, fico tranquilo no fim de semana.",
+    "recordVoice": "Gravar áudio (10s)",
+    "stopRecording": "Parar ({{sec}}s)",
+    "voiceSaved": "Áudio salvo ({{sec}}s)",
+    "removeVoice": "Remover áudio",
+    "micError": "Não foi possível acessar o microfone.",
+    "save": "Salvar",
+    "cancel": "Cancelar"
+  },
+  "reminderModal": {
+    "badge": "Lembrete ativo",
+    "capsuleLabel": "Mensagem do seu eu do passado",
+    "voiceLabel": "Áudio do seu eu do passado",
+    "doneBtn": "Feito!",
+    "snoozeBtn": "Adiar 15 min",
+    "frictionTitle": "Você já adiou este item {{count}} vezes",
+    "frictionSubtitle": "Antes de adiar de novo, diga o motivo para eu encontrar o melhor horário livre:",
+    "reasons": {
+      "no_time": "Sem tempo agora",
+      "low_energy": "Sem energia",
+      "blocked": "Travado / dependo de algo"
+    },
+    "suggestedSlot": "Próximo bloco livre sugerido: {{slot}}",
+    "confirmSmartSnooze": "Reagendar para este bloco"
+  },
+  "settings": {
+    "title": "Configurações",
+    "language": "Idioma",
+    "theme": "Tema",
+    "themes": {
+      "system": "Sistema",
+      "light": "Claro",
+      "dark": "Escuro"
+    },
+    "notificationsTitle": "Notificações do navegador",
+    "notificationsGranted": "Ativadas",
+    "notificationsDenied": "Bloqueadas no navegador",
+    "notificationsDefault": "Não solicitadas",
+    "enableNotifications": "Ativar notificações",
+    "testNotification": "Testar notificação",
+    "testNotificationBody": "Tudo certo! Seus lembretes vão aparecer assim."
+  }
+}
