@@ -1,8 +1,8 @@
 {
   "app": {
     "name": "Krono",
-    "subtitle": "Local-first personal agenda",
-    "localBadge": "Offline-ready"
+    "subtitle": "Personal agenda powered by Supabase",
+    "localBadge": "Cloud & Realtime"
   },
   "nav": {
     "today": "Today",
@@ -10,6 +10,41 @@
     "week": "Week",
     "newEvent": "New event",
     "settings": "Settings"
+  },
+  "auth": {
+    "title": "Krono Account",
+    "loginTab": "Sign In",
+    "signupTab": "Sign Up",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "••••••••",
+    "loginBtn": "Sign In",
+    "signupBtn": "Create Account",
+    "logout": "Sign Out",
+    "signInOrRegister": "Sign In / Sign Up",
+    "loggedInAs": "Logged in as",
+    "signupSuccess": "Account created! Please sign in to continue.",
+    "configurationRequired": "Sign-in is not configured yet. Set up Supabase credentials to enable access."
+  },
+  "filter": {
+    "all": "All",
+    "focus": "🎯 Focus",
+    "personal": "👤 Personal",
+    "health": "🌿 Health",
+    "quick": "⚡ Quick"
+  },
+  "daySummary": {
+    "button": "Daily Wrap-up",
+    "modalTitle": "Daily Wrap-up",
+    "stats": "Today's Summary",
+    "completedTasks": "{{count}} completed",
+    "pendingTasks": "{{count}} unfinished",
+    "quote": "“In the world you will have tribulation. But take heart; I have overcome the world.”",
+    "movePendingBtn": "Move unfinished to tomorrow",
+    "allDoneCongrats": "Congratulations! All planned events for today were completed.",
+    "moveSuccess": "Unfinished tasks moved to tomorrow!",
+    "close": "Wrap up day"
   },
   "agenda": {
     "emptyTitle": "No events for this period",

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { db } from '@/shared/db/database';
 import { useAppStore } from '@/app/store';
+import { supabase } from '@/shared/db/supabaseClient';
 import {
   playSoftChime,
   sendBrowserNotification,
@@ -12,19 +12,26 @@ export function useReminderEngine() {
   useEffect(() => {
     const checkDueReminders = async () => {
       const now = Date.now();
-      const dueItems = await db.items
-        .where('status')
-        .equals('pending')
-        .filter((item) => item.remindAt <= now && !item.notifiedAt)
-        .toArray();
+      const { items, upsertItemInStore } = useAppStore.getState();
+      const dueItems = items.filter(
+        (item) => item.status === 'pending' && item.remindAt <= now && !item.notifiedAt,
+      );
 
       if (dueItems.length === 0) return;
 
-      // Sort by earliest remindAt
       dueItems.sort((a, b) => a.remindAt - b.remindAt);
       const first = dueItems[0];
 
-      await db.items.update(first.id, { notifiedAt: now });
+      const updated = { ...first, notifiedAt: now };
+      upsertItemInStore(updated);
+
+      if (supabase) {
+        await supabase
+          .from('agenda_items')
+          .update({ notified_at: now, updated_at: new Date().toISOString() })
+          .eq('id', first.id);
+      }
+
       playSoftChime();
       await sendBrowserNotification(
         first.title,

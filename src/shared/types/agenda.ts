@@ -12,6 +12,7 @@ export interface SnoozeEntry {
 
 export interface AgendaItem {
   id: string;
+  userId?: string;
   title: string;
   description?: string;
   startAt: number;
