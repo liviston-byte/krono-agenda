@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useLiveQuery } from 'dexie-react-hooks';
 import { BellRing, Check, Clock, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { db } from '@/shared/db/database';
 import { useAppStore } from '@/app/store';
 import { Badge, Button, Modal } from '@/design-system';
 import type { SnoozeReason } from '@/shared/types/agenda';
@@ -24,12 +22,8 @@ export function ActiveReminderModal() {
   const { t, i18n } = useTranslation();
   const activeReminderId = useAppStore((s) => s.activeReminderId);
   const openReminderModal = useAppStore((s) => s.openReminderModal);
-
-  const item = useLiveQuery(
-    () => (activeReminderId ? db.items.get(activeReminderId) : undefined),
-    [activeReminderId],
-  );
-  const allItems = useLiveQuery(() => db.items.toArray(), []) ?? [];
+  const allItems = useAppStore((s) => s.items);
+  const item = allItems.find((i) => i.id === activeReminderId);
 
   const [selectedReason, setSelectedReason] = useState<SnoozeReason>('no_time');
 

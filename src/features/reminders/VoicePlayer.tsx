@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useLiveQuery } from 'dexie-react-hooks';
 import { Volume2 } from 'lucide-react';
-import { db } from '@/shared/db/database';
+import { getVoiceNote } from '@/features/agenda/agendaRepository';
 
 interface VoicePlayerProps {
   voiceNoteId: string;
@@ -9,17 +8,22 @@ interface VoicePlayerProps {
 }
 
 export function VoicePlayer({ voiceNoteId, label }: VoicePlayerProps) {
-  const voiceNote = useLiveQuery(() => db.voiceNotes.get(voiceNoteId), [voiceNoteId]);
-  const [audioUrl, setAudioUrl] = useState<string | null>(null);
+  const [audioSrc, setAudioSrc] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!voiceNote?.blob) return;
-    const url = URL.createObjectURL(voiceNote.blob);
-    setAudioUrl(url);
-    return () => URL.revokeObjectURL(url);
-  }, [voiceNote]);
+    let active = true;
+    void getVoiceNote(voiceNoteId).then((note) => {
+      if (!active) return;
+      if (note?.audio_base64) {
+        setAudioSrc(note.audio_base64);
+      }
+    });
+    return () => {
+      active = false;
+    };
+  }, [voiceNoteId]);
 
-  if (!audioUrl) return null;
+  if (!audioSrc) return null;
 
   return (
     <div className="p-3 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-subtle)] space-y-2">
@@ -27,7 +31,7 @@ export function VoicePlayer({ voiceNoteId, label }: VoicePlayerProps) {
         <Volume2 className="w-4 h-4 text-[var(--accent-primary)]" />
         <span>{label}</span>
       </div>
-      <audio controls src={audioUrl} className="w-full h-9" />
+      <audio controls src={audioSrc} className="w-full h-9" />
     </div>
   );
 }

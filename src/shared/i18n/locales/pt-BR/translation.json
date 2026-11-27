@@ -1,8 +1,8 @@
 {
   "app": {
     "name": "Krono",
-    "subtitle": "Agenda pessoal local-first",
-    "localBadge": "Offline-ready"
+    "subtitle": "Agenda pessoal conectada ao Supabase",
+    "localBadge": "Cloud & Realtime"
   },
   "nav": {
     "today": "Hoje",
@@ -10,6 +10,41 @@
     "week": "Semana",
     "newEvent": "Novo compromisso",
     "settings": "Configurações"
+  },
+  "auth": {
+    "title": "Conta Krono",
+    "loginTab": "Entrar",
+    "signupTab": "Criar conta",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "seu@email.com",
+    "passwordLabel": "Senha",
+    "passwordPlaceholder": "••••••••",
+    "loginBtn": "Entrar",
+    "signupBtn": "Cadastrar",
+    "logout": "Sair",
+    "signInOrRegister": "Entrar / Cadastrar",
+    "loggedInAs": "Conectado como",
+    "signupSuccess": "Conta criada com sucesso! Faça login para continuar.",
+    "configurationRequired": "O login ainda não está configurado. Defina as credenciais do Supabase para habilitar o acesso."
+  },
+  "filter": {
+    "all": "Todas",
+    "focus": "🎯 Foco",
+    "personal": "👤 Pessoal",
+    "health": "🌿 Saúde",
+    "quick": "⚡ Rápido"
+  },
+  "daySummary": {
+    "button": "Resumo do Dia",
+    "modalTitle": "Fechamento do Dia",
+    "stats": "Balanço de Hoje",
+    "completedTasks": "{{count}} concluída(s)",
+    "pendingTasks": "{{count}} não concluída(s)",
+    "quote": "“No mundo haveis de ter aflições. Coragem! Eu venci o mundo.”",
+    "movePendingBtn": "Mover pendentes para amanhã",
+    "allDoneCongrats": "Parabéns! Todas as tarefas programadas para hoje foram concluídas.",
+    "moveSuccess": "Tarefas movidas com sucesso para amanhã!",
+    "close": "Concluir dia"
   },
   "agenda": {
     "emptyTitle": "Nenhum compromisso para este período",

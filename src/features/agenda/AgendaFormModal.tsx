@@ -1,9 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { format } from 'date-fns';
-import { useLiveQuery } from 'dexie-react-hooks';
 import { Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { db } from '@/shared/db/database';
 import { useAppStore } from '@/app/store';
 import { Button, Input, Modal, Textarea } from '@/design-system';
 import type { AgendaCategory } from '@/shared/types/agenda';
@@ -22,10 +20,8 @@ export function AgendaFormModal() {
   const editingItemId = useAppStore((s) => s.editingItemId);
   const selectedDate = useAppStore((s) => s.selectedDate);
   const closeForm = useAppStore((s) => s.closeForm);
-
-  const editingItem = useLiveQuery(
-    () => (editingItemId ? db.items.get(editingItemId) : undefined),
-    [editingItemId],
+  const editingItem = useAppStore((s) =>
+    editingItemId ? s.items.find((i) => i.id === editingItemId) : undefined,
   );
 
   const [title, setTitle] = useState('');
